@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.example.lunchbox_offline_router"
         minSdkVersion 28
-        targetSdkVersion 29
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -28,13 +28,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation "androidx.activity:activity-ktx:1.10.1"
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
-    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.3.0'
-    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.42.6'
+    implementation 'org.maplibre.gl:android-sdk:11.6.1'
+    implementation 'com.github.maplibre:maplibre-navigation-android:4.0.0'
 }

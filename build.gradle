@@ -4,11 +4,12 @@ buildscript {
     ext.kotlin_version = '1.3.72'
     repositories {
         google()
-        jcenter()
-        
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath 'com.android.tools.build:gradle:3.6.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -19,19 +20,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        maven { url 'https://mapbox.bintray.com/mapbox' }
-        maven {
-            url 'https://api.mapbox.com/downloads/v2/releases/maven'
-            authentication {
-                basic(BasicAuthentication)
-            }
-            credentials {
-                username = 'mapbox'
-                // Use the secret token you stored in gradle.properties as the password
-                password = "SECRET_TOKEN"
-            }
-        }
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 
